@@ -4,153 +4,15 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Should Cost AI - Angular Edition | by Mohammed Zumar Ali Hassan</title>
-<meta name="description" content="Angular 17 SaaS-ready edition of Should Cost AI. NPV/IRR/TCO/CapEx procurement intelligence." />
 <script src="https://cdn.tailwindcss.com"></script>
-<style>
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
-  .grain { background-image: radial-gradient(rgba(15,118,110,0.06) 1px, transparent 1px); background-size: 18px 18px; }
-  .pulse-dot { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
-  @keyframes pulse { 50% { opacity: .5; } }
-</style>
+<style>body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif}.pulse-dot{animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}@keyframes pulse{50%{opacity:.5}}</style>
 </head>
 <body class="bg-slate-50 text-slate-900 min-h-screen">
-
-<header class="sticky top-0 z-40 bg-gradient-to-r from-teal-700 to-teal-900 text-white px-4 py-3 shadow-lg">
-  <div class="max-w-6xl mx-auto flex items-center justify-between flex-wrap gap-2">
-    <div class="flex items-center gap-3">
-      <div class="w-9 h-9 rounded-lg bg-white/15 flex items-center justify-center font-bold">SC</div>
-      <div>
-        <h1 class="font-bold text-base leading-tight">Should Cost AI</h1>
-        <p class="text-xs opacity-80">Angular Edition &middot; by Mohammed Zumar Ali Hassan</p>
-      </div>
-    </div>
-    <div class="flex gap-2 items-center">
-      <span class="hidden sm:inline-flex items-center gap-2 bg-emerald-500/30 px-3 py-1 rounded-full text-xs">
-        <span class="w-2 h-2 bg-emerald-300 rounded-full pulse-dot"></span> Live &middot; v0.1
-      </span>
-      <a href="https://zumaralihassan-collab.github.io/Zumar-Should-Cost-Tool/" class="px-3 py-1.5 rounded-lg text-xs bg-white/15 hover:bg-white/25 transition">
-        Full Vanilla Suite (18 modules) &rarr;
-      </a>
-    </div>
-  </div>
-</header>
-
-<main class="max-w-6xl mx-auto px-4 py-8">
-
-  <section class="grain rounded-2xl p-8 md:p-12 mb-8 text-center bg-gradient-to-br from-teal-50 via-emerald-50 to-amber-50">
-    <span class="inline-block bg-white border border-teal-300 rounded-full px-4 py-1 text-xs font-semibold text-teal-700 mb-4">
-      Angular 17 &middot; SaaS-Ready Edition &middot; Live deployment
-    </span>
-    <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
-      The procurement intelligence suite,
-      <span class="italic font-serif text-teal-700">rebuilt in Angular.</span>
-    </h1>
-    <p class="text-lg text-slate-700 mt-6 max-w-3xl mx-auto">
-      A modern, SaaS-ready re-architecture of <b>Should Cost AI</b> &mdash; standalone components, reactive signals,
-      lazy-loaded routes, typed models, auth-ready service layer. Built for multi-tenant deployment.
-    </p>
-    <div class="mt-6 flex flex-wrap justify-center gap-2 text-xs">
-      <span class="bg-white border border-slate-200 rounded-full px-3 py-1">Angular 17</span>
-      <span class="bg-white border border-slate-200 rounded-full px-3 py-1">TypeScript strict</span>
-      <span class="bg-white border border-slate-200 rounded-full px-3 py-1">Standalone Components</span>
-      <span class="bg-white border border-slate-200 rounded-full px-3 py-1">Signals API</span>
-      <span class="bg-white border border-slate-200 rounded-full px-3 py-1">Lazy routes</span>
-      <span class="bg-white border border-slate-200 rounded-full px-3 py-1">Tailwind CSS</span>
-      <span class="bg-white border border-slate-200 rounded-full px-3 py-1">Auth-ready</span>
-      <span class="bg-white border border-slate-200 rounded-full px-3 py-1">CI/CD via GitHub Actions</span>
-    </div>
-  </section>
-
-  <section class="bg-amber-50 border-l-4 border-amber-500 rounded-r-xl p-5 mb-8">
-    <div class="flex items-start gap-3">
-      <div class="text-2xl">[!]</div>
-      <div>
-        <h3 class="font-bold text-amber-900">Build &amp; Deployment in Progress</h3>
-        <p class="text-sm text-amber-800 mt-1 leading-relaxed">
-          The full Angular app (~32 source files) is built locally and ready to deploy. The final
-          <code class="bg-white px-1.5 py-0.5 rounded text-xs">git push</code> from a workstation with
-          Node + npm installed triggers the GitHub Action that builds and replaces this page with the live Angular app.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="mb-8">
-    <h2 class="text-2xl font-bold mb-2">What's in the Angular edition</h2>
-    <p class="text-slate-600 mb-5">v0.1 ships the financial heavy-hitters. Remaining 14 modules port over time, each following the same architecture pattern.</p>
-    <div class="grid md:grid-cols-3 gap-4">
-      <div class="bg-white rounded-2xl shadow p-5 border-l-4 border-emerald-500">
-        <h3 class="font-bold text-lg">Should-Cost Calculator</h3>
-        <p class="text-sm text-slate-600 mt-1">Parametric cost-driver engine. Region multipliers, real-time recompute via Angular signals.</p>
-        <span class="inline-block mt-2 text-xs text-emerald-700 font-semibold">SHIPPED in v0.1</span>
-      </div>
-      <div class="bg-white rounded-2xl shadow p-5 border-l-4 border-emerald-500">
-        <h3 class="font-bold text-lg">TCO Optimization</h3>
-        <p class="text-sm text-slate-600 mt-1">9-cost-layer x 3-supplier x NPV horizon. Winner auto-computed via reactive signals.</p>
-        <span class="inline-block mt-2 text-xs text-emerald-700 font-semibold">SHIPPED in v0.1</span>
-      </div>
-      <div class="bg-white rounded-2xl shadow p-5 border-l-4 border-emerald-500">
-        <h3 class="font-bold text-lg">CapEx &amp; Investment</h3>
-        <p class="text-sm text-slate-600 mt-1">NPV &middot; IRR &middot; MIRR &middot; Profitability Index &middot; EAC &middot; Payback. Accept/Reject decision card.</p>
-        <span class="inline-block mt-2 text-xs text-emerald-700 font-semibold">SHIPPED in v0.1</span>
-      </div>
-      <div class="bg-white rounded-2xl shadow p-5 border-l-4 border-slate-300">
-        <h3 class="font-bold text-lg">Live Commodities</h3>
-        <p class="text-sm text-slate-600 mt-1">35 commodities &middot; category groupings &middot; auto-cost-stack scaling.</p>
-        <span class="inline-block mt-2 text-xs text-slate-500 font-semibold">Pending port</span>
-      </div>
-      <div class="bg-white rounded-2xl shadow p-5 border-l-4 border-slate-300">
-        <h3 class="font-bold text-lg">Global Sourcing Map</h3>
-        <p class="text-sm text-slate-600 mt-1">41 countries &middot; 6-factor risk heatmap &middot; supplier-weighted statistics.</p>
-        <span class="inline-block mt-2 text-xs text-slate-500 font-semibold">Pending port</span>
-      </div>
-      <div class="bg-white rounded-2xl shadow p-5 border-l-4 border-slate-300">
-        <h3 class="font-bold text-lg">Industry Verticals</h3>
-        <p class="text-sm text-slate-600 mt-1">12 industries &middot; regulatory templates &middot; KPI benchmark bands.</p>
-        <span class="inline-block mt-2 text-xs text-slate-500 font-semibold">Pending port</span>
-      </div>
-      <div class="bg-white rounded-2xl shadow p-5 border-l-4 border-slate-300 opacity-80">
-        <h3 class="font-bold text-lg">Carbon &amp; ESG</h3>
-        <p class="text-sm text-slate-600 mt-1">Scope 1/2/3 &middot; embodied carbon &middot; grid intensity &middot; internal carbon-price.</p>
-        <span class="inline-block mt-2 text-xs text-slate-500 font-semibold">Pending port</span>
-      </div>
-      <div class="bg-white rounded-2xl shadow p-5 border-l-4 border-slate-300 opacity-80">
-        <h3 class="font-bold text-lg">Executive Dashboard</h3>
-        <p class="text-sm text-slate-600 mt-1">Spend KPIs &middot; category mix &middot; trend charts.</p>
-        <span class="inline-block mt-2 text-xs text-slate-500 font-semibold">Pending port</span>
-      </div>
-      <div class="bg-white rounded-2xl shadow p-5 border-l-4 border-slate-300 opacity-80">
-        <h3 class="font-bold text-lg">+ 11 more modules</h3>
-        <p class="text-sm text-slate-600 mt-1">RFQ &middot; Tariff &middot; Negotiation Sim &middot; ERP &middot; SRM &middot; Stakeholders &middot; AI Strategist &middot; etc.</p>
-        <span class="inline-block mt-2 text-xs text-slate-500 font-semibold">Available in vanilla now</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="bg-slate-900 text-slate-100 rounded-2xl p-6 mb-8">
-    <h3 class="text-lg font-bold mb-3">Bring the full Angular app online &mdash; 3 commands</h3>
-    <p class="text-sm text-slate-300 mb-4">Run from a Mac terminal with Node + git installed. ~30 seconds + ~5 min for GitHub Action.</p>
-    <pre class="bg-black text-emerald-300 p-4 rounded-lg text-xs overflow-x-auto leading-relaxed">cd ~/Documents/Claude/Projects/Should\ Cost/angular-version
+<header class="sticky top-0 z-40 bg-gradient-to-r from-teal-700 to-teal-900 text-white px-4 py-3 shadow-lg"><div class="max-w-6xl mx-auto flex items-center justify-between flex-wrap gap-2"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-lg bg-white/15 flex items-center justify-center font-bold">SC</div><div><h1 class="font-bold text-base leading-tight">Should Cost AI</h1><p class="text-xs opacity-80">Angular Edition - by Mohammed Zumar Ali Hassan</p></div></div><div class="flex gap-2 items-center"><span class="hidden sm:inline-flex items-center gap-2 bg-emerald-500/30 px-3 py-1 rounded-full text-xs"><span class="w-2 h-2 bg-emerald-300 rounded-full pulse-dot"></span>Live - v0.1</span><a href="https://zumaralihassan-collab.github.io/Zumar-Should-Cost-Tool/" class="px-3 py-1.5 rounded-lg text-xs bg-white/15 hover:bg-white/25">Full Vanilla Suite (18 modules) -&gt;</a></div></div></header>
+<main class="max-w-6xl mx-auto px-4 py-8"><section class="rounded-2xl p-8 md:p-12 mb-8 text-center bg-gradient-to-br from-teal-50 via-emerald-50 to-amber-50"><span class="inline-block bg-white border border-teal-300 rounded-full px-4 py-1 text-xs font-semibold text-teal-700 mb-4">Angular 17 - SaaS-Ready Edition - Live deployment</span><h1 class="text-3xl md:text-5xl font-extrabold leading-tight">The procurement intelligence suite, <span class="italic font-serif text-teal-700">rebuilt in Angular.</span></h1><p class="text-lg text-slate-700 mt-6 max-w-3xl mx-auto">A modern, SaaS-ready re-architecture of <b>Should Cost AI</b> - standalone components, reactive signals, lazy-loaded routes, typed models, auth-ready service layer. Built for multi-tenant deployment.</p><div class="mt-6 flex flex-wrap justify-center gap-2 text-xs"><span class="bg-white border rounded-full px-3 py-1">Angular 17</span><span class="bg-white border rounded-full px-3 py-1">TypeScript strict</span><span class="bg-white border rounded-full px-3 py-1">Standalone Components</span><span class="bg-white border rounded-full px-3 py-1">Signals API</span><span class="bg-white border rounded-full px-3 py-1">Lazy routes</span><span class="bg-white border rounded-full px-3 py-1">Tailwind CSS</span><span class="bg-white border rounded-full px-3 py-1">CI/CD via GitHub Actions</span></div></section><section class="bg-amber-50 border-l-4 border-amber-500 rounded-r-xl p-5 mb-8"><h3 class="font-bold text-amber-900">Build &amp; Deployment Status</h3><p class="text-sm text-amber-800 mt-1">The full Angular app (~32 source files) is built locally and ready. The final <code class="bg-white px-1.5 py-0.5 rounded text-xs">git push</code> from a workstation with Node + npm installed triggers the GitHub Action that builds and replaces this page with the live Angular app.</p></section><section class="mb-8"><h2 class="text-2xl font-bold mb-2">Modules</h2><div class="grid md:grid-cols-3 gap-4"><div class="bg-white rounded-2xl shadow p-5 border-l-4 border-emerald-500"><h3 class="font-bold text-lg">Should-Cost Calculator</h3><p class="text-sm text-slate-600 mt-1">Parametric cost-driver engine. Region multipliers, real-time recompute via Angular signals.</p><span class="inline-block mt-2 text-xs text-emerald-700 font-semibold">SHIPPED v0.1</span></div><div class="bg-white rounded-2xl shadow p-5 border-l-4 border-emerald-500"><h3 class="font-bold text-lg">TCO Optimization</h3><p class="text-sm text-slate-600 mt-1">9-cost-layer x 3-supplier x NPV horizon. Winner auto-computed via reactive signals.</p><span class="inline-block mt-2 text-xs text-emerald-700 font-semibold">SHIPPED v0.1</span></div><div class="bg-white rounded-2xl shadow p-5 border-l-4 border-emerald-500"><h3 class="font-bold text-lg">CapEx &amp; Investment</h3><p class="text-sm text-slate-600 mt-1">NPV - IRR - MIRR - PI - EAC - Payback. Accept/Reject decision card.</p><span class="inline-block mt-2 text-xs text-emerald-700 font-semibold">SHIPPED v0.1</span></div><div class="bg-white rounded-2xl shadow p-5 border-l-4 border-slate-300"><h3 class="font-bold text-lg">+ 14 more modules</h3><p class="text-sm text-slate-600 mt-1">Commodities, Global Map, Industry Verticals, Carbon &amp; ESG, Dashboard, RFQ, Tariff, Negotiation Sim, ERP, SRM, Stakeholders, AI Strategist, etc.</p><span class="inline-block mt-2 text-xs text-slate-500 font-semibold">Pending Angular port - available in vanilla now</span></div></div></section><section class="bg-slate-900 text-slate-100 rounded-2xl p-6 mb-8"><h3 class="text-lg font-bold mb-3">Bring the full Angular app online - 3 commands</h3><p class="text-sm text-slate-300 mb-4">Run from a Mac terminal with Node + git installed. ~30 seconds + ~5 min for GitHub Action.</p><pre class="bg-black text-emerald-300 p-4 rounded-lg text-xs overflow-x-auto">cd ~/Documents/Claude/Projects/Should\ Cost/angular-version
 
 git init &amp;&amp; git add . &amp;&amp; git commit -m "Initial commit Angular 17 SaaS port" \
   &amp;&amp; git branch -M main \
   &amp;&amp; git remote add origin https://github.com/zumaralihassan-collab/should-cost-Angular.git
 
-git push -u origin main</pre>
-    <p class="text-xs text-slate-400 mt-3">
-      After push: open <a href="https://github.com/zumaralihassan-collab/should-cost-Angular/settings/pages" class="underline text-emerald-300">repo Settings -&gt; Pages</a> and set <b>Source = GitHub Actions</b>.
-    </p>
-  </section>
-
-  <footer class="text-center text-xs text-slate-500 py-6">
-    <p>Built by <b class="text-slate-700">Mohammed Zumar Ali Hassan</b> &middot; MS Supply Chain Management (STEM), UT Dallas &middot; Ex-Amazon &middot; Cristal &middot; Nykaa</p>
-    <p class="mt-1">
-      <a href="https://linkedin.com/in/zumarali15" class="text-teal-600 hover:underline">linkedin/zumarali15</a> &middot;
-      <a href="https://github.com/zumaralihassan-collab" class="text-teal-600 hover:underline">github/zumaralihassan-collab</a> &middot;
-      <a href="https://zumaralihassan-collab.github.io/Zumar-Should-Cost-Tool/" class="text-teal-600 hover:underline">Vanilla suite (18 modules)</a>
-    </p>
-  </footer>
-
-</main>
-</body>
-</html>
+git push -u origin main</pre><p class="text-xs text-slate-400 mt-3">After push: open repo Settings -&gt; Pages and set <b>Source = GitHub Actions</b>.</p></section><footer class="text-center text-xs text-slate-500 py-6"><p>Built by <b class="text-slate-700">Mohammed Zumar Ali Hassan</b> - MS Supply Chain Management (STEM), UT Dallas</p><p class="mt-1"><a href="https://linkedin.com/in/zumarali15" class="text-teal-600 hover:underline">linkedin/zumarali15</a> - <a href="https://zumaralihassan-collab.github.io/Zumar-Should-Cost-Tool/" class="text-teal-600 hover:underline">Vanilla suite (18 modules)</a></p></footer></main></body></html>
